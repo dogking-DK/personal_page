@@ -1,0 +1,93 @@
+.gobal
+{
+    background-color: #e8e8e8;
+}
+div.page_warpper
+{
+    overflow: hidden;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+/*网站左上角的logo*/
+.logo
+{
+    font-size: 50px;
+    text-decoration: none;
+    color: black;
+}
+/*导航栏属性*/
+#bar
+{
+    text-align: center;
+    background-color: #585858;
+}
+#bar ul
+{
+    list-style-type: none;
+    margin: 10px 0 0;
+    text-align: left;
+    overflow: hidden;
+    display: table;
+}
+#bar ul li
+{
+    display: inline;
+    float: left;
+    font-size: 32px;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+#bar a
+{
+    margin: 0;
+    color: white;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 5px;
+}
+#bar a:hover
+{
+    border: 5px solid rgb(0, 0, 0);
+    padding: 0;
+    background-color: black;
+}
+
+
+main
+{
+    display: flex;
+}
+article
+{
+    flex: 4;
+}
+p
+{
+    font-size: large;
+}
+
+
+aside
+{
+    flex: 1;
+    overflow: hidden;
+    color: white;
+    background-color: #585858;
+}
+aside h2
+{
+    margin-left: 5px;
+}
+aside a
+{
+    text-decoration: none;
+    color: azure;
+    padding: 2px;
+}
+aside a:hover
+{
+    border: 2px solid;
+    padding: 0;
+}
