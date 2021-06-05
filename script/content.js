@@ -1,5 +1,6 @@
 
 let projects = [];
+let json_proj = [];
 projects[0] =
     {
         title: "self_introduction",
@@ -15,8 +16,18 @@ projects[1] =
         description: "I still got a long way to roll",
         project_type: "since all the project is within the self_introduction, there is no other project page",
         hyperlink: "html/index.html"
-    }
+    };
 
+function get_info()
+{
+    $.getJSON("../text/project_info", function(data)
+    {
+        $.each(data, function (i, item)
+        {
+            json_proj.push(item);
+        })
+    })
+}
 
 function print_project_info()
 {
@@ -42,13 +53,20 @@ $(document).ready(function ()
 
 function init()
 {
-    $("div#editable p").empty();
-    $("div#editable p#title").append("title: " + projects[0].title);
-    $("div#editable p#summary").append("summary: " + projects[0].summary);
-    $("div#editable p#description").append("description: " + projects[0].description);
-    $("div#editable p#project_type").append("project type: " + projects[0].project_type);
+    // $("div#editable p").empty();
+    // $("div#editable p#title").append("title: " + projects[0].title);
+    // $("div#editable p#summary").append("summary: " + projects[0].summary);
+    // $("div#editable p#description").append("description: " + projects[0].description);
+    // $("div#editable p#project_type").append("project type: " + projects[0].project_type);
+    $("div#result p").empty();
+    $("div#result p#title").append("title: " + json_proj[0].title);
+    $("div#result p#summary").append("summary: " + json_proj[0].summary);
+    $("div#result p#description").append("description: " + json_proj[0].description);
+    $("div#result p#project_type").append("project type: " + json_proj[0].project_type);
 }
 
-// init();
+
 print_project_info();
-JSON.parse(projects[0]);
+get_info();
+console.log(json_proj);
+//JSON.parse(projects[0]);

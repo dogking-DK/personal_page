@@ -1,19 +1,16 @@
-{
-  "projects":
-  [
-    {
-      "title": "self_introduction",
-      "summary": "this is the page contain my experience",
-      "description": "I still got a long way to roll",
-      "project_type": "is about Computer Graphics",
-      "hyperlink": "html/self_introduction.html"
-    },
-    {
-      "title": "index",
-      "summary": "this is the page contain the welcome page",
-      "description": "I still got a long way to roll",
-      "project_type": "since all the project is within the self_introduction, there is no other project page",
-      "hyperlink": "html/index.html"
-    }
-  ]
-}
+[
+  {
+    "title": "self_introduction",
+    "summary": "this is the page contain my experience",
+    "description": "I still got a long way to roll",
+    "project_type": "is about Computer Graphics",
+    "hyperlink": "html/self_introduction.html"
+  },
+  {
+    "title": "index",
+    "summary": "this is the page contain the welcome page",
+    "description": "I still got a long way to roll",
+    "project_type": "since all the project is within the self_introduction, there is no other project page",
+    "hyperlink": "html/index.html"
+  }
+]

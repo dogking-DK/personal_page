@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="gobal">
+<body class="gobal" onload="init()">
 <div class="page_warpper">
   <!--网页标题-->
   <header>
@@ -36,18 +36,24 @@
 
     <article>
       <div id="toggle">
-        <button>click me</button>
+        <button onclick="init()">click me</button>
         <p>
           this paragraph will disappear after you click the button above.<br>
           And if you click that button again, this will show again!!!
         </p>
       </div>
+      <div id="result">
+        <p id="title">can't load</p>
+        <p id="summary">can't load</p>
+        <p id="description">can't load</p>
+        <p id="project_type">can't load</p>
+      </div>
       <div id="editable">
-        <p id="title">aaaaaaa</p>
-        <p id="summary">ssssss</p>
-        <p id="description">ddddddd</p>
-        <p id="project_type">ddddddd</p>
-        <button>OK</button>
+        <span>title:       </span><input type="text" name="title"><br>
+        <span>summary:     </span><input type="text" name="summary"><br>
+        <span>description: </span><input type="text" name="description"><br>
+        <span>project type:</span><input type="text" name="project_type"><br>
+        <button onclick="edit()">click me!</button>
       </div>
 
     </article>
