@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="gobal" onload="init()">
+<body class="gobal" onload="get_info()">
 <div class="page_warpper">
   <!--网页标题-->
   <header>
@@ -49,11 +49,14 @@
         <p id="project_type">can't load</p>
       </div>
       <div id="editable">
-        <span>title:       </span><input type="text" name="title"><br>
-        <span>summary:     </span><input type="text" name="summary"><br>
-        <span>description: </span><input type="text" name="description"><br>
-        <span>project type:</span><input type="text" name="project_type"><br>
-        <button onclick="edit()">click me!</button>
+        <form>
+          <label for="text_title">title:</label><input type="text" id="text_title" name="title"><br>
+          <label for="text_sum">summary:</label><input type="text" id="text_sum" name="summary"><br>
+          <label for="text_desc">description:</label><input type="text" id="text_desc" name="description"><br>
+          <label for="text_proj_type">project type:</label><input type="text" id="text_proj_type" name="project_type"><br>
+        </form>
+        <button onclick="fresh()">fresh</button>
+        <button onclick="edit()">submit</button>
       </div>
 
     </article>

@@ -1,8 +1,8 @@
 [
   {
-    "title": "self_introduction",
-    "summary": "this is the page contain my experience",
-    "description": "I still got a long way to roll",
+    "title": "simple ray tracing engine",
+    "summary": "It's a simple engine using C++ based on ray tracing instead of rasterization",
+    "description": "This engine is based on the Sherly's book \"ray tracing in one week\". However, it is still some work to do this thing right",
     "project_type": "is about Computer Graphics",
     "hyperlink": "html/self_introduction.html"
   },

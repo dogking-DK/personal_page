@@ -27,6 +27,7 @@ function get_info()
             json_proj.push(item);
         })
     })
+    fresh();
 }
 
 function print_project_info()
@@ -43,15 +44,7 @@ $(document).ready(function ()
     })
 })
 
-$(document).ready(function ()
-{
-    $("#editable button").click(function ()
-    {
-        init();
-    })
-})
-
-function init()
+function fresh()
 {
     // $("div#editable p").empty();
     // $("div#editable p#title").append("title: " + projects[0].title);
@@ -59,14 +52,21 @@ function init()
     // $("div#editable p#description").append("description: " + projects[0].description);
     // $("div#editable p#project_type").append("project type: " + projects[0].project_type);
     $("div#result p").empty();
-    $("div#result p#title").append("title: " + json_proj[0].title);
-    $("div#result p#summary").append("summary: " + json_proj[0].summary);
-    $("div#result p#description").append("description: " + json_proj[0].description);
-    $("div#result p#project_type").append("project type: " + json_proj[0].project_type);
+    $("div#result p#title").append("<em>title: </em>" + json_proj[0].title);
+    $("div#result p#summary").append("<em>summary: </em>" + json_proj[0].summary);
+    $("div#result p#description").append("<em>description: </em>" + json_proj[0].description);
+    $("div#result p#project_type").append("<em>project type: </em>" + json_proj[0].project_type);
 }
 
+function edit()
+{
+    json_proj[0].title=$("#text_title").val();
+    json_proj[0].summary=$("#text_sum").val();
+    json_proj[0].description=$("#text_desc").val();
+    json_proj[0].project_type=$("#text_proj_type").val();
+    fresh();
+}
 
 print_project_info();
 get_info();
 console.log(json_proj);
-//JSON.parse(projects[0]);
